@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Pros from './components/Pros';
-import Cons from './components/Cons';
+import Pros from './components/Pros/Pros';
+import Cons from './components/Cons/Cons';
 import {
     StyledApp,
     StyledContainer,

@@ -1,10 +1,9 @@
-import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { ItemList } from '../App';
+import styled from 'styled-components';
+import { ItemList } from '../../App';
+import ConsItem from './ConsItem';
 
-const Cons = (props: { consList: ItemList[] }) => {
-    const { consList } = props;
-
+const Cons: React.FC<{ consList: ItemList[] }> = ({ consList }) => {
     const [cons, setCons] = useState<ItemList[]>([]);
 
     useEffect(() => {
@@ -14,11 +13,9 @@ const Cons = (props: { consList: ItemList[] }) => {
     return (
         <ConsCard>
             <h3>Cons List</h3>
-            <ul>
-                {cons.map((con, index) => (
-                    <li key={index}>{con.item}</li>
-                ))}
-            </ul>
+            {cons.map((con, index) => (
+                <ConsItem key={index} con={con.item} />
+            ))}
         </ConsCard>
     );
 };
@@ -26,10 +23,10 @@ const Cons = (props: { consList: ItemList[] }) => {
 const ConsCard = styled.div`
     width: 40%;
     margin-top: 16px;
-    height: auto;
+    min-height: 300px;
     border: 1px solid #eee;
     border-radius: 8px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
-`
+`;
 
 export default Cons;

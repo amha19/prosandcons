@@ -1,10 +1,9 @@
-import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { ItemList } from '../App';
+import styled from 'styled-components';
+import { ItemList } from '../../App';
+import ProsItem from './ProsItem';
 
-const Pros = (props: { prosList: ItemList[] }) => {
-    const { prosList } = props;
-
+const Pros: React.FC<{ prosList: ItemList[] }> = ({ prosList }) => {
     const [pros, setPros] = useState<ItemList[]>([]);
 
     useEffect(() => {
@@ -14,11 +13,9 @@ const Pros = (props: { prosList: ItemList[] }) => {
     return (
         <ProsCard>
             <h3>Pros List</h3>
-            <ul>
-                {pros.map((pro, index) => (
-                    <li key={index}>{pro.item}</li>
-                ))}
-            </ul>
+            {pros.map((pro, index) => (
+                <ProsItem key={index} pro={pro.item} />
+            ))}
         </ProsCard>
     );
 };
@@ -26,10 +23,10 @@ const Pros = (props: { prosList: ItemList[] }) => {
 const ProsCard = styled.div`
     width: 40%;
     margin-top: 16px;
-    height: auto;
+    min-height: 300px;
     border: 1px solid #eee;
     border-radius: 8px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
-` 
+`;
 
 export default Pros;
