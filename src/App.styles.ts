@@ -11,28 +11,19 @@ export const StyledApp = styled.div`
 
 export const StyledContainer = styled.div`
     width: 75%;
-    border: 1px solid saddlebrown;
+    background-color: rgba(0, 0, 0, 0.02);
+    min-height: 100vh;
 `;
 
 export const Text = styled.p`
-    font-size: ${(props: { size: number }) => (props.size ? props.size + 'rem' : '1rem')};
+    font-size: ${(props: { size?: number }) => (props.size ? props.size + 'rem' : '1rem')};
+    color: rgba(0, 0, 0, 0.7);
     margin: 40px 0 56px 0;
 `;
 
 export const BtnInput = styled.p`
     display: flex;
     justify-content: center;
-`;
-
-export const Button = styled.button`
-    font-size: 1rem;
-    padding: 8px 16px;
-    margin: 0 16px;
-    background: transparent;
-    border: 2px solid #3f69cd;
-    border-radius: 4px;
-    color: #3f69cd;
-    box-sizing: border-box;
 `;
 
 export const Input = styled.input`
