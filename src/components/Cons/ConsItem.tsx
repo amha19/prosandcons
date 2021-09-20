@@ -11,8 +11,11 @@ const ConsItem: React.FC<{ con: string; conId: number; removeListItem: (id: numb
 }) => {
     return (
         <StyledBox>
-            <StyledText size={1}>{con}</StyledText>
-            <RemoveBtn onClick={() => removeListItem(conId)}>X</RemoveBtn>
+            <StyledText size={1}>
+                <span style={{ color: 'red', paddingRight: 8 }}>&#10007;</span>
+                {con}
+            </StyledText>
+            <RemoveBtn onClick={() => removeListItem(conId)}>&#10006;</RemoveBtn>
         </StyledBox>
     );
 };

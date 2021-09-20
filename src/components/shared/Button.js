@@ -4,11 +4,16 @@ const Button = styled.button`
     font-size: 1rem;
     padding: 8px 16px;
     margin: 0 16px;
-    background: transparent;
-    border: 2px solid #3f69cd;
+    background-color: #4d4dff;
     border-radius: 4px;
-    color: #3f69cd;
+    border-color: transparent;
+    color: #fff;
     box-sizing: border-box;
+    min-width: 80px;
+    &:hover {
+        background-color: #0000cc;
+        transition: 300ms ease-out;
+    }
 `;
 
 export const RemoveBtn = styled.button`
@@ -16,8 +21,10 @@ export const RemoveBtn = styled.button`
     border: transparent;
     background: transparent;
     margin-right: 32px;
+    color: #ddd;
     &:hover {
-        font-size: 103%;
+        color: #aaa;
+        transition: 300ms;
     }
 `;
 

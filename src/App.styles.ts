@@ -9,16 +9,25 @@ export const StyledApp = styled.div`
     text-align: center;
 `;
 
+export const NavBar = styled.nav`
+    width: 100vw;
+    height: 80px;
+    background-color: #000099;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    z-index: 100;
+`;
+
 export const StyledContainer = styled.div`
     width: 75%;
-    background-color: rgba(0, 0, 0, 0.02);
+    background: linear-gradient(to top, #d3cce3, #e9e4f0);
     min-height: 100vh;
 `;
 
 export const Text = styled.p`
     font-size: ${(props: { size?: number }) => (props.size ? props.size + 'rem' : '1rem')};
-    color: rgba(0, 0, 0, 0.7);
-    margin: 40px 0 56px 0;
+    color: rgba(0, 0, 0, 0.75);
+    margin: 56px 0;
 `;
 
 export const BtnInput = styled.p`
@@ -32,7 +41,7 @@ export const Input = styled.input`
     background: #fff;
     border-radius: 4px;
     border: 1px solid #d1d1d1;
-    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 153, 0.07);
     font-family: inherit;
     font-size: 1em;
     line-height: 1.45;
@@ -43,12 +52,12 @@ export const Input = styled.input`
     -o-transition: 0.18s ease-out;
     transition: 0.18s ease-out;
     &:hover {
-        box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+        box-shadow: inset 1px 2px 8px rgba(0, 0, 153, 0.02);
     }
     &:focus {
         color: #4b515d;
         border: 1px solid #b8b6b6;
-        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 153, 0.2);
     }
 `;
 

@@ -11,8 +11,11 @@ const ProsItem: React.FC<{ pro: string; proId: number; removeListItem: (id: numb
 }) => {
     return (
         <StyledBox>
-            <StyledText size={1}>{pro}</StyledText>
-            <RemoveBtn onClick={() => removeListItem(proId)}>X</RemoveBtn>
+            <StyledText size={1}>
+                <span style={{ color: 'lightgreen', paddingRight: 8 }}>&#10003;</span>
+                {pro}
+            </StyledText>
+            <RemoveBtn onClick={() => removeListItem(proId)}>&#10006;</RemoveBtn>
         </StyledBox>
     );
 };

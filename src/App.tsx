@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import Pros from './components/Pros/Pros';
 import Cons from './components/Cons/Cons';
 import Button from './components/shared/Button';
-import { StyledApp, StyledContainer, Input, ListContainer, Text, BtnInput } from './App.styles';
+import {
+    StyledApp,
+    StyledContainer,
+    Input,
+    ListContainer,
+    Text,
+    BtnInput,
+    NavBar,
+} from './App.styles';
 
 export type ItemList = {
     id: number;
@@ -29,6 +38,9 @@ const App: React.FC = () => {
 
     return (
         <StyledApp>
+            <NavBar>
+                <StyledText size={2}>Pros & Cons</StyledText>
+            </NavBar>
             <StyledContainer>
                 <Text size={2.5}>Don't be in a haste</Text>
                 <BtnInput>
@@ -60,5 +72,11 @@ const App: React.FC = () => {
         </StyledApp>
     );
 };
+
+const StyledText = styled(Text)`
+    color: #fff;
+    margin: 0;
+    padding: 20px 16px 4px 56px;
+`;
 
 export default App;
