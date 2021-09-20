@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledApp = styled.div`
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-`;
-
 export const NavBar = styled.nav`
     width: 100vw;
     height: 80px;
@@ -18,10 +9,19 @@ export const NavBar = styled.nav`
     z-index: 100;
 `;
 
+export const StyledApp = styled.div`
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+`;
+
 export const StyledContainer = styled.div`
     width: 75%;
-    background: linear-gradient(to top, #d3cce3, #e9e4f0);
-    min-height: 100vh;
+    background: linear-gradient(to bottom, #e5f3fe, #c5e3fe);
+    min-height: calc(100vh - 80px);
 `;
 
 export const Text = styled.p`

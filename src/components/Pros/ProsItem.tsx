@@ -4,11 +4,13 @@ import Box from '../shared/Box';
 import { Text } from '../../App.styles';
 import { RemoveBtn } from '../shared/Button';
 
-const ProsItem: React.FC<{ pro: string; proId: number; removeListItem: (id: number) => void }> = ({
-    pro,
-    proId,
-    removeListItem,
-}) => {
+type Props = {
+    pro: string;
+    proId: number;
+    removeListItem: (id: number) => void;
+};
+
+const ProsItem: React.FC<Props> = ({ pro, proId, removeListItem }) => {
     return (
         <StyledBox>
             <StyledText size={1}>
