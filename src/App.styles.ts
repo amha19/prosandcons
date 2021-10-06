@@ -20,7 +20,7 @@ export const StyledApp = styled.div`
 
 export const StyledContainer = styled.div`
     width: 75%;
-    background: linear-gradient(to bottom, #e5f3fe, #c5e3fe);
+    background: linear-gradient(to bottom, #f2f2f2, #d9d9d9);
     min-height: calc(100vh - 80px);
 `;
 
